@@ -1,0 +1,35 @@
+#nav{
+	position: fixed;
+	top: 0px;
+	left: 0px;	
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	list-style-type: none;
+	background-color: #88C070;
+	display: flex;
+}
+
+#nav li{
+	width: 25%;
+	float: left;
+	background-color: #306230;
+}
+
+#nav li a:hover{
+	background-color: #00ff00;
+}
+
+#nav li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #88C070;
+}
+
+#nav li a:hover{
+	color: #88C070;
+}

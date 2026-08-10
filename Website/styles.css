@@ -1,35 +1,177 @@
-#nav{
+body{
+	background-color: #88C070;
+}
+/*This is the header code*/
+#header{
 	position: fixed;
-	top: 0px;
-	left: 0px;	
-	width: 100%;
+	top: 0;
+	left: 0;
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-	list-style-type: none;
 	background-color: #88C070;
+	width: 100vw;
+	height: 22vh;
+}
+/*This is the navigation bar code*/
+#nav{
+	/*Declares position and size of the bar*/
+	position: absolute;
+	top: 12vh;
+	left: 2.5vw;	
+	width: 65vw;
+	margin: 0px;
+	padding: 0px;
+	/*Allows navigation bar to display horizontally*/
+	overflow: hidden;
 	display: flex;
+	/*Removes the dot before list items*/
+	list-style-type: none;
 }
-
+/*This is the styling for individual buttons*/
 #nav li{
-	width: 25%;
+	/*Declares position and size of the button*/
+	width: 10vw;
 	float: left;
+	margin: 1.5vw;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	/*Declares how the buttons are styled with colour and borders*/
 	background-color: #306230;
+	line-height: 0;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #0F380F;
 }
-
-#nav li a:hover{
-	background-color: #00ff00;
-}
-
+/*This is the styling for the links in the buttons*/
 #nav li a{
+	/*This ensures that the links are clickable from anywhere in the button*/
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	/*This centers the link text*/
+	padding-top: 3.5vh;
+	padding-bottom: 3.5vh;
+	/*This changes the link colour*/
+	color: #88C070;
+	/*This fades the colour*/
+	transition: 0.3s;
+}
+/*Declares how the links change when hovered*/
+#nav li a:hover{
+	/*Changes the colour when hovered*/
+	background-color: #0F380F;
 	color: #88C070;
 }
-
-#nav li a:hover{
+/*This is the styling for the search bar*/
+#searchbar{
+	position: absolute;
+	top: 12vh;
+	left: 67.5vw;	
+	width: 30vw;
+/*This mostly copies the navbar button styling because the searchbar is formatted similarly*/
+}
+#searchbar div{
+	line-height: 0;
+	padding-top: 3.5vh;
+	padding-bottom: 3.5vh;
+	margin-left: 1.5vw;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #0F380F;
+	box-sizing: border-box;
+	background-color: #306230;
 	color: #88C070;
+}
+/*This declares the style for the main heading*/
+h1{
+	text-align: center;
+	font-size: 7vh;
+	color: #0F380F;
+	margin-top: 2vh;
+}
+/*This declares the style for the subheadings*/
+h2{
+	text-align: center;
+	font-size: 2vw;
+	color: #88C070;
+	/*This sets out the background banner behind the subheadings*/
+	margin: 0;
+	padding: 0.5vh 0vw 1vh 0vw;
+	background-color: #306230;
+}
+/*The main background uses this css to style it*/
+#hero{
+	background-color: #0F380F;
+	border: #306230;
+	border-width: 5px;
+	border-style: solid;
+	position: absolute;
+	top: 22vh;
+	left: 2.5vw;
+	width: 95vw;
+	height: 73vh;
+}
+/*Each box in the hero section is styled using this code*/
+/*Individual positions and sizes are programmed inline*/
+.box{
+	position: absolute;
+	background-color: #88C070;
+	box-sizing: border-box;
+	border: #306230;
+	border-width: 5px;
+	border-style: solid;
+	margin: 1vw;
+}
+/*This is the gallery bar code*/
+/*It behaves similarly to the navigation bar, so some of the code has been copied*/
+.gallery{
+	/*Declares position and size of the bar*/
+	position: absolute;
+	padding: 1.5vh;
+	margin: 0px;
+	/*Allows navigation bar to display horizontally*/
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: flex;
+	/*Removes the dot before list items*/
+	list-style-type: none;
+}
+/*This is the styling for individual buttons*/
+.gallery li{
+	/*Declares position and size of the button*/
+	float: left;
+	margin: 1.5vh;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	/*Declares how the buttons are styled with colour and borders*/
+	border-style: solid;
+	border-width: 4px;
+	border-color: #0F380F;
+}
+/*This is the styling for the links in the buttons*/
+.gallery li a{
+	/*This ensures that the links are clickable from anywhere in the button*/
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	/*This changes the link colour*/
+	color: #88C070;
+	/*This fades the colour*/
+	transition: 0.3s;
+}
+.gallery li a img{
+	height: 100%;
+}
+
+/*All the code inside this @media section will change the layout on mobile views*/
+@media (orientation: portrait){
+	#hero{
+		display: flex;
+		justify-content: center;
+	}
 }
